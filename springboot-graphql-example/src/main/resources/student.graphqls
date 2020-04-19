@@ -1,0 +1,23 @@
+type Query {
+    getAllStudents: [Student],
+    getStudent(name:String): Student
+
+}
+
+type Student {
+    id: Int!
+    lesson: Lesson!
+    name: String
+    age: Int
+}
+
+type Lesson{
+  lessonName : LessonName
+  teacherName : String
+}
+
+enum LessonName {
+	MATHEMATICS,
+    BIOLOGY,
+    HISTORY
+}
